@@ -360,6 +360,8 @@ class Flask(App):
                 view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore
             )
 
+    
+
     def get_send_file_max_age(self, filename: str | None) -> int | None:
         """Used by :func:`send_file` to determine the ``max_age`` cache
         value for a given file path if it wasn't passed.
